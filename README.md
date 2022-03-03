@@ -17,7 +17,7 @@ git clone https://github.com/NestyChe/S7
 ## Docker
 ### Image creation and start
 ```
-docker build --build-arg JAR_FILE=build/libs/\*.jar -t s7-0.0.1-snapshot .
+docker build --build-arg JAR_FILE=./\*.jar -t s7-0.0.1-snapshot .
 docker run -p 8080:8080 s7-0.0.1-snapshot
 ```
 ## Запрос на удаленный сервер
