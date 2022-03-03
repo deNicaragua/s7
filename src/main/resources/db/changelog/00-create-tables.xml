@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+    <changeSet id="1" author="nesty">
+        <createTable tableName="user">
+            <column autoIncrement="true" name="user_id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="user_key"/>
+            </column>
+            <column name="name" type="varchar(50)">
+            </column>
+            <column name="login" type="varchar(100)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="varchar(250)"/>
+        </createTable>
+        <createTable tableName="friends">
+            <column autoIncrement="true" name="friends_id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="id"/>
+            </column>
+            <column name="request_id" type="int">
+                <constraints  nullable="false" foreignKeyName="request_key" references="user(user_id)"/>
+            </column>
+            <column name="address_id" type="int">
+                <constraints nullable="false" foreignKeyName="address_key" references="user(user_id)"/>
+            </column>
+            <column name="status" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

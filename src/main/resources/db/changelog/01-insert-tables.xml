@@ -1,0 +1,74 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+    <changeSet id="2" author="nesty">
+        <insert tableName="user">
+            <column name="user_id" value="1"/>
+            <column name="name" value="Den Koen"/>
+            <column name="login" value="test@google.com"/>
+            <column name="password" value="3761P-560a"/>
+        </insert>
+        <insert tableName="user">
+            <column name="user_id" value="2"/>
+            <column name="name" value="Sara Waru"/>
+            <column name="login" value="doRLm-cs@yandex.ru"/>
+            <column name="password" value="50.150Io"/>
+        </insert>
+        <insert tableName="user">
+            <column name="user_id" value="3"/>
+            <column name="name" value="Kolya Onegin"/>
+            <column name="login" value="KolyaOnegin@gmail.com"/>
+            <column name="password" value="-7Gmd3113"/>
+        </insert>
+        <insert tableName="user">
+            <column name="user_id" value="4"/>
+            <column name="name" value="Mila Ivanova"/>
+            <column name="login" value="lolol_cash@mail.ru"/>
+            <column name="password" value="-77.51031mwpR"/>
+        </insert>
+        <insert tableName="user">
+            <column name="user_id" value="5"/>
+            <column name="name" value="Anton Anosov"/>
+            <column name="login" value="Samara-Aerline144@base.com"/>
+            <column name="password" value="wo,eqo1qfOK58"/>
+        </insert>
+        <insert tableName="user">
+            <column name="user_id" value="6"/>
+            <column name="name" value="Anton Smirnov"/>
+            <column name="login" value="ffPm0rt@gmail.com"/>
+            <column name="password" value="Oenvne_32mmc"/>
+        </insert>
+        <insert tableName="user">
+            <column name="user_id" value="7"/>
+            <column name="name" value="Kirill Borobov"/>
+            <column name="login" value="jPlipline@yandex.ru"/>
+            <column name="password" value="QscRsz55"/>
+        </insert>
+        <insert tableName="friends">
+            <column name="friends_id" value="2"/>
+            <column name="request_id" value="2"/>
+            <column name="address_Id" value="4"/>
+            <column name="status" value="request_first"/>
+        </insert>
+        <insert tableName="friends">
+            <column name="friends_id" value="1"/>
+            <column name="request_id" value="6"/>
+            <column name="address_Id" value="3"/>
+            <column name="status" value="friends"/>
+        </insert>
+        <insert tableName="friends">
+            <column name="friends_id" value="4"/>
+            <column name="request_id" value="1"/>
+            <column name="address_Id" value="7"/>
+            <column name="status" value="bloqued"/>
+        </insert>
+        <insert tableName="friends">
+            <column name="friends_id" value="9"/>
+            <column name="request_id" value="6"/>
+            <column name="address_Id" value="1"/>
+            <column name="status" value="friends_by_request_second"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
