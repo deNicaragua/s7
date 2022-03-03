@@ -1,5 +1,5 @@
 FROM openjdk:11
 EXPOSE 8080
-ARG JAR_FILE=target/s7-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=./s7-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
